@@ -16,7 +16,9 @@ jobs:
     - name: Install k3s
       run: |
         curl -sfL https://get.k3s.io | sh -
-        echo "KUBECONFIG=/etc/rancher/k3s/k3s.yaml" >> $GITHUB_ENV
+        sudo cp /etc/rancher/k3s/k3s.yaml $HOME/k3s.yaml
+        sudo chown $USER $HOME/k3s.yaml
+        echo "KUBECONFIG=$HOME/k3s.yaml" >> $GITHUB_ENV
 
     - name: Download and extract knoxctl binary
       run: |
