@@ -16,8 +16,6 @@ jobs:
     - name: Install k3s
       run: |
         curl -sfL https://get.k3s.io | sh -
-        # Wait for k3s to be ready
-        while ! kubectl get nodes; do sleep 1; done
 
     - name: Set KUBECONFIG
       run: |
