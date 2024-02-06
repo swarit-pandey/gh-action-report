@@ -13,8 +13,8 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: actions-k3s
-      uses: debianmaster/actions-k3s@v1.0.5
+    - name: Setup K3d/K3s
+      uses: nolar/setup-k3d-k3s@v1.0.9      
              
     - name: Download and extract knoxctl binary
       run: |
