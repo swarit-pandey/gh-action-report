@@ -16,11 +16,8 @@ jobs:
     - name: Install k3s
       run: |
         curl -sfL https://get.k3s.io | sh -
-
-    - name: Set KUBECONFIG
-      run: |
         echo "KUBECONFIG=/etc/rancher/k3s/k3s.yaml" >> $GITHUB_ENV
-             
+
     - name: Download and extract knoxctl binary
       run: |
         wget -qO- https://knoxctl.netlify.app/binaries/accuknoxcli_0.1.5_linux_amd64.tar.gz | tar -zxvf -
@@ -30,4 +27,5 @@ jobs:
         chmod +x knoxctl
         sudo mv knoxctl /usr/local/bin
         knoxctl --help
-        sudo knoxctl install
+        kubectl wait --for=condition=ready nodes --all --timeout=60s
+        knoxctl install
