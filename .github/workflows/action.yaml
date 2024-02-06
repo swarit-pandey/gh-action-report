@@ -1,0 +1,27 @@
+name: Setup and Run CLI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  setup-run-knoxctl:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Download and extract binary
+      run: |
+        wget -qO- https://knoxctl.netlify.app/binaries/accuknoxcli_0.1.5_linux_amd64.tar.gz | tar -zxvf -
+
+    - name: Move binary to /usr/local/bin
+      run: |
+        chmod +x knoxctl
+        sudo mv knoxctl /usr/local/bin
+      
+    - name: Run knoxctl install
+      run: |
+        knoxctl install
