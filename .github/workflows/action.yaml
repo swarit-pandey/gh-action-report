@@ -13,7 +13,18 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Download and extract binary
+    - name: Install k3s
+      run: |
+        curl -sfL https://get.k3s.io | sh -
+        # Wait for k3s to be ready
+        while ! kubectl get nodes; do sleep 1; done
+
+    - name: Set KUBECONFIG
+      run: |
+        echo "KUBECONFIG=/etc/rancher/k3s/k3s.yaml" >> $GITHUB_ENV
+        echo "/usr/local/bin" >> $GITHUB_PATH
+
+    - name: Download and extract knoxctl binary
       run: |
         wget -qO- https://knoxctl.netlify.app/binaries/accuknoxcli_0.1.5_linux_amd64.tar.gz | tar -zxvf -
 
