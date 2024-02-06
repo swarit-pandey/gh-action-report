@@ -31,4 +31,4 @@ jobs:
         chmod +x knoxctl
         sudo mv knoxctl /usr/local/bin
         knoxctl --help
-        knoxctl install
+        sudo knoxctl install
