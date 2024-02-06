@@ -13,8 +13,15 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: actions-k3s
-      uses: debianmaster/actions-k3s@v1.0.5      
+    - name: Install k3s
+      run: |
+        curl -sfL https://get.k3s.io | sh -
+        # Wait for k3s to be ready
+        while ! kubectl get nodes; do sleep 1; done
+
+    - name: Set KUBECONFIG
+      run: |
+        echo "KUBECONFIG=/etc/rancher/k3s/k3s.yaml" >> $GITHUB_ENV
              
     - name: Download and extract knoxctl binary
       run: |
