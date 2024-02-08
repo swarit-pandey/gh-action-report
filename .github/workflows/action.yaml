@@ -41,23 +41,17 @@ jobs:
 
     - name: Deploy test appliction
       run: |
-        kubectl create deployment nginx --image=nginx
-        POD=$(kubectl get pod -l app=nginx -o name)
-
-    - name: Install Helm and kube-prometheus stack
+        kubectl create namespace cache
+        kubectl create deployment redis --image=redis --namespace=redis
+    
+    - name: Wait for summary engine to collect telemetry data
       run: |
-        curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-        chmod 700 get_helm.sh
-        ./get_helm.sh
-        helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-        helm repo update
-        helm install kps prometheus-community/kube-prometheus-stack
+        echo "summary engine is collecting data"
+        sleep 180
 
     - name: Generate report and see report
       run: |
         knoxctl report --baseline .github/workflows/summary.json --no-tui 
-        cat .github/workflows/summary.json
-        cat knoxctl_out/reports/pr_report.md
 
     - name: Upload PR report as artifact
       uses: actions/upload-artifact@v2

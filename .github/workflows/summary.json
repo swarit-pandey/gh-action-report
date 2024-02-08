@@ -17,8 +17,8 @@
                                         },
                                         "source": "/usr/bin/dash",
                                         "destination": "/usr/bin/basename",
-                                        "count": 402,
-                                        "updated_time": 1707400781
+                                        "count": 538,
+                                        "updated_time": 1707409029
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -28,8 +28,8 @@
                                         },
                                         "source": "/usr/bin/dash",
                                         "destination": "/usr/bin/dirname",
-                                        "count": 1206,
-                                        "updated_time": 1707400781
+                                        "count": 1614,
+                                        "updated_time": 1707409029
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -39,8 +39,8 @@
                                         },
                                         "source": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erl_child_setup",
                                         "destination": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erlexec",
-                                        "count": 402,
-                                        "updated_time": 1707400781
+                                        "count": 538,
+                                        "updated_time": 1707409029
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -50,8 +50,8 @@
                                         },
                                         "source": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erl_child_setup",
                                         "destination": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erl",
-                                        "count": 402,
-                                        "updated_time": 1707400781
+                                        "count": 538,
+                                        "updated_time": 1707409029
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -61,8 +61,8 @@
                                         },
                                         "source": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erl_child_setup",
                                         "destination": "/usr/local/lib/erlang/erts-13.2.2.2/bin/inet_gethost",
-                                        "count": 402,
-                                        "updated_time": 1707400781
+                                        "count": 538,
+                                        "updated_time": 1707409029
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -72,8 +72,8 @@
                                         },
                                         "source": "/usr/bin/dash",
                                         "destination": "/usr/bin/df",
-                                        "count": 2443,
-                                        "updated_time": 1707400817
+                                        "count": 3265,
+                                        "updated_time": 1707409041
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -83,8 +83,8 @@
                                         },
                                         "source": "/usr/bin/dash",
                                         "destination": "/usr/local/lib/erlang/erts-13.2.2.2/bin/dyn_erl",
-                                        "count": 402,
-                                        "updated_time": 1707400781
+                                        "count": 538,
+                                        "updated_time": 1707409029
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -94,8 +94,8 @@
                                         },
                                         "source": "/usr/bin/dash",
                                         "destination": "/usr/local/lib/erlang/erts-13.2.2.2/bin/epmd",
-                                        "count": 401,
-                                        "updated_time": 1707400781
+                                        "count": 537,
+                                        "updated_time": 1707409029
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -105,8 +105,8 @@
                                         },
                                         "source": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erl_child_setup",
                                         "destination": "/usr/local/lib/erlang/erts-13.2.2.2/bin/beam.smp",
-                                        "count": 401,
-                                        "updated_time": 1707400781
+                                        "count": 536,
+                                        "updated_time": 1707409029
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -116,13 +116,13 @@
                                         },
                                         "source": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erlexec",
                                         "destination": "/bin/sh",
-                                        "count": 331,
-                                        "updated_time": 1707400781
+                                        "count": 436,
+                                        "updated_time": 1707409029
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
                                         "container": {
-                                            "name": "not_rabbitmq",
+                                            "name": "rabbitmq",
                                             "image": "docker.io/library/rabbitmq:3.12.2-management@sha256:2ae0b1448de431124cd77c9477f079d4a89080affb02ff85b800477c551566eb"
                                         },
                                         "destination": "/usr/local/lib/erlang/erts-13.2.2.2/bin/epmd",
@@ -141,9 +141,9 @@
                                         "command": "/usr/local/lib/erlang/erts-13.2.2.2/bin/epmd",
                                         "ip": "127.0.0.1",
                                         "port": 4369,
-                                        "protocol": "UDP",
-                                        "count": 402,
-                                        "updated_time": 1707400781,
+                                        "protocol": "TCP",
+                                        "count": 538,
+                                        "updated_time": 1707409029,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -178,8 +178,8 @@
                                         "ip": "10.42.0.19",
                                         "port": 4369,
                                         "protocol": "TCP",
-                                        "count": 402,
-                                        "updated_time": 1707400781,
+                                        "count": 538,
+                                        "updated_time": 1707409029,
                                         "control_info": {
                                             "address_type": "source",
                                             "resource": {
@@ -229,8 +229,8 @@
                                         "ip": "127.0.0.1",
                                         "port": 8090,
                                         "protocol": "TCPv6",
-                                        "count": 70,
-                                        "updated_time": 1707400080,
+                                        "count": 82,
+                                        "updated_time": 1707408972,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -268,7 +268,7 @@
                                             "image": "public.ecr.aws/k9v9d5v2/discovery-engine-sumengine:v0.1.15@sha256:6198a89f91f3a17c34e900810d1cf76c8c9bf04b3cce3388a42348796472831b"
                                         },
                                         "type": "Egress",
-                                        "command": "/Sumengine/summary_engine",
+                                        "command": "/Sumengine/sumengine",
                                         "ip": "10.43.202.12",
                                         "port": 32767,
                                         "protocol": "TCP",
@@ -358,8 +358,8 @@
                                         "type": "Egress",
                                         "command": "/usr/local/lib/erlang/erts-13.2.2.2/bin/beam.smp",
                                         "protocol": "UDP",
-                                        "count": 809,
-                                        "updated_time": 1707400781,
+                                        "count": 1081,
+                                        "updated_time": 1707409029,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -412,8 +412,8 @@
                                         "ip": "10.42.0.19",
                                         "port": 4369,
                                         "protocol": "TCP",
-                                        "count": 402,
-                                        "updated_time": 1707400781,
+                                        "count": 538,
+                                        "updated_time": 1707409029,
                                         "control_info": {
                                             "address_type": "destination",
                                             "resource": {
@@ -475,8 +475,8 @@
                                         "ip": "127.0.0.1",
                                         "port": 4369,
                                         "protocol": "TCP",
-                                        "count": 402,
-                                        "updated_time": 1707400781,
+                                        "count": 538,
+                                        "updated_time": 1707409029,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -549,8 +549,8 @@
                                         "ip": "0.0.0.0",
                                         "port": 4369,
                                         "protocol": "AF_INET",
-                                        "count": 360,
-                                        "updated_time": 1707400781,
+                                        "count": 474,
+                                        "updated_time": 1707409029,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -566,8 +566,8 @@
                                         "command": "/usr/local/lib/erlang/erts-13.2.2.2/bin/beam.smp",
                                         "ip": "0.0.0.0",
                                         "protocol": "AF_INET",
-                                        "count": 1211,
-                                        "updated_time": 1707400781,
+                                        "count": 1619,
+                                        "updated_time": 1707409029,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -584,8 +584,109 @@
                                         "ip": "0.0.0.0",
                                         "port": 4369,
                                         "protocol": "AF_INET",
-                                        "count": 42,
-                                        "updated_time": 1707400053,
+                                        "count": 64,
+                                        "updated_time": 1707408968,
+                                        "control_info": {
+                                            "resource": {},
+                                            "workload": {}
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "replicaSets": {},
+                    "statefulSets": {},
+                    "daemonSets": {},
+                    "jobs": {},
+                    "cronJobs": {}
+                },
+                "cache": {
+                    "deployments": {
+                        "redis": {
+                            "labels": "",
+                            "events": {
+                                "file": null,
+                                "process": [
+                                    {
+                                        "pod": "redis-6ff7cd7598-kb5vc",
+                                        "container": {
+                                            "name": "redis",
+                                            "image": "docker.io/library/redis:latest@sha256:11c3e418c29672341be9a8e3015d96f05b88e5ad58829885d36f8342b4da13c2"
+                                        },
+                                        "source": "/var/lib/rancher/k3s/data/bf3548384eaabb3435bf08112f1b0cba1afc5add6a6f2f2372aa2906a598fd04/bin/containerd-shim-runc-v2",
+                                        "destination": "/usr/local/bin/gosu",
+                                        "count": 1,
+                                        "updated_time": 1707408121
+                                    },
+                                    {
+                                        "pod": "redis-6ff7cd7598-kb5vc",
+                                        "container": {
+                                            "name": "redis",
+                                            "image": "docker.io/library/redis:latest@sha256:11c3e418c29672341be9a8e3015d96f05b88e5ad58829885d36f8342b4da13c2"
+                                        },
+                                        "source": "/var/lib/rancher/k3s/data/bf3548384eaabb3435bf08112f1b0cba1afc5add6a6f2f2372aa2906a598fd04/bin/containerd-shim-runc-v2",
+                                        "destination": "/usr/local/bin/docker-entrypoint.sh",
+                                        "count": 2,
+                                        "updated_time": 1707408121
+                                    },
+                                    {
+                                        "pod": "redis-6ff7cd7598-kb5vc",
+                                        "container": {
+                                            "name": "redis",
+                                            "image": "docker.io/library/redis:latest@sha256:11c3e418c29672341be9a8e3015d96f05b88e5ad58829885d36f8342b4da13c2"
+                                        },
+                                        "source": "/var/lib/rancher/k3s/data/bf3548384eaabb3435bf08112f1b0cba1afc5add6a6f2f2372aa2906a598fd04/bin/containerd-shim-runc-v2",
+                                        "destination": "/usr/local/bin/redis-server",
+                                        "count": 1,
+                                        "updated_time": 1707408121
+                                    },
+                                    {
+                                        "pod": "redis-6ff7cd7598-kb5vc",
+                                        "container": {
+                                            "name": "redis",
+                                            "image": "docker.io/library/redis:latest@sha256:11c3e418c29672341be9a8e3015d96f05b88e5ad58829885d36f8342b4da13c2"
+                                        },
+                                        "source": "/usr/bin/dash",
+                                        "destination": "/usr/bin/find",
+                                        "count": 1,
+                                        "updated_time": 1707408121
+                                    }
+                                ],
+                                "ingress": null,
+                                "egress": null,
+                                "bind": [
+                                    {
+                                        "pod": "redis-6ff7cd7598-kb5vc",
+                                        "container": {
+                                            "name": "redis",
+                                            "image": "docker.io/library/redis:latest@sha256:11c3e418c29672341be9a8e3015d96f05b88e5ad58829885d36f8342b4da13c2"
+                                        },
+                                        "type": "Bind",
+                                        "command": "/usr/local/bin/redis-server",
+                                        "ip": "0.0.0.0",
+                                        "port": 6379,
+                                        "protocol": "AF_INET",
+                                        "count": 9,
+                                        "updated_time": 1707408121,
+                                        "control_info": {
+                                            "resource": {},
+                                            "workload": {}
+                                        }
+                                    },
+                                    {
+                                        "pod": "redis-6ff7cd7598-kb5vc",
+                                        "container": {
+                                            "name": "redis",
+                                            "image": "docker.io/library/redis:latest@sha256:11c3e418c29672341be9a8e3015d96f05b88e5ad58829885d36f8342b4da13c2"
+                                        },
+                                        "type": "Bind",
+                                        "command": "/usr/local/bin/redis-server",
+                                        "ip": "::",
+                                        "port": 6379,
+                                        "protocol": "AF_INET6",
+                                        "count": 9,
+                                        "updated_time": 1707408121,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -614,8 +715,8 @@
                                             "name": "nginx",
                                             "image": "docker.io/library/nginx:latest@sha256:5f44022eab9198d75939d9eaa5341bc077eca16fa51d4ef32d33f1bd4c8cbe7d"
                                         },
-                                        "source": "/usr/bin/not_dash",
-                                        "destination": "/usr/bin/not_grep",
+                                        "source": "/usr/bin/dash",
+                                        "destination": "/usr/bin/grep",
                                         "count": 1,
                                         "updated_time": 1707376055
                                     },
@@ -771,7 +872,7 @@
                                         "command": "/usr/sbin/nginx",
                                         "ip": "::",
                                         "port": 80,
-                                        "protocol": "TCPv6",
+                                        "protocol": "AF_INET6",
                                         "count": 9,
                                         "updated_time": 1707376055,
                                         "control_info": {
@@ -789,7 +890,7 @@
                                         "command": "/usr/sbin/nginx",
                                         "ip": "0.0.0.0",
                                         "port": 80,
-                                        "protocol": "AF_Q_NET",
+                                        "protocol": "AF_INET",
                                         "count": 9,
                                         "updated_time": 1707376055,
                                         "control_info": {
