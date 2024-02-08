@@ -41,7 +41,7 @@ jobs:
 
     - name: Deploy test appliction
       run: |
-        kubectl create deployment nginx --image=nginx
+        kubectl create deployment redis --image=redis
         POD=$(kubectl get pod -l app=nginx -o name)
 
     - name: Install Helm and kube-prometheus stack
@@ -52,6 +52,11 @@ jobs:
         helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
         helm repo update
         helm install kps prometheus-community/kube-prometheus-stack
+    
+    - name: Generate summary and dump
+      run: |
+        knoxctl summary --dump
+        cat knoxctl_out/summary/json/summary.json
 
     - name: Generate report and see report
       run: |
