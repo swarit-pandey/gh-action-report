@@ -1,0 +1,100 @@
+{
+    "clusters": {
+        "default": {
+            "namespaces": {
+                "accuknox-agents": {
+                    "deployments": {
+                        "discovery-engine": {
+                            "labels": "",
+                            "events": {
+                                "file": null,
+                                "process": [
+                                    {
+                                        "pod": "discovery-engine-c5f7cf46c-rbptv",
+                                        "container": {
+                                            "name": "rabbitmq",
+                                            "image": "docker.io/library/rabbitmq:3.12.2-management@sha256:2ae0b1448de431124cd77c9477f079d4a89080affb02ff85b800477c551566eb"
+                                        },
+                                        "source": "/usr/bin/dash",
+                                        "destination": "/usr/bin/basename",
+                                        "count": 586,
+                                        "updated_time": 1707411940
+                                    }
+                                ],
+                                "ingress": null,
+                                "egress": null,
+                                "bind": null
+                            }
+                        }
+                    },
+                    "replicaSets": {},
+                    "statefulSets": {},
+                    "daemonSets": {},
+                    "jobs": {},
+                    "cronJobs": {}
+                },
+                "cache": {
+                    "deployments": {
+                        "redis": {
+                            "labels": "",
+                            "events": {
+                                "file": null,
+                                "process": [
+                                    {
+                                        "pod": "redis-6ff7cd7598-kb5vc",
+                                        "container": {
+                                            "name": "redis",
+                                            "image": "docker.io/library/redis:latest@sha256:11c3e418c29672341be9a8e3015d96f05b88e5ad58829885d36f8342b4da13c2"
+                                        },
+                                        "source": "/var/lib/rancher/k3s/data/bf3548384eaabb3435bf08112f1b0cba1afc5add6a6f2f2372aa2906a598fd04/bin/containerd-shim-runc-v2",
+                                        "destination": "/usr/local/bin/redis-server",
+                                        "count": 1,
+                                        "updated_time": 1707408121
+                                    }
+                                ],
+                                "ingress": null,
+                                "egress": null,
+                                "bind": null
+                            }
+                        }
+                    },
+                    "replicaSets": {},
+                    "statefulSets": {},
+                    "daemonSets": {},
+                    "jobs": {},
+                    "cronJobs": {}
+                },
+                "default": {
+                    "deployments": {
+                        "nginx": {
+                            "labels": "",
+                            "events": {
+                                "file": null,
+                                "process": [
+                                    {
+                                        "pod": "nginx-77b4fdf86c-44vfn",
+                                        "container": {
+                                            "name": "nginx",
+                                            "image": "docker.io/library/nginx:latest@sha256:5f44022eab9198d75939d9eaa5341bc077eca16fa51d4ef32d33f1bd4c8cbe7d"
+                                        },
+                                        "destination": "/usr/bin/cut",
+                                        "count": 1,
+                                        "updated_time": 1707376055
+                                    }
+                                ],
+                                "ingress": null,
+                                "egress": null,
+                                "bind": null
+                            }
+                        }
+                    },
+                    "replicaSets": {},
+                    "statefulSets": {},
+                    "daemonSets": {},
+                    "jobs": {},
+                    "cronJobs": {}
+                }
+            }
+        }
+    }
+}
