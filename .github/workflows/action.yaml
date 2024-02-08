@@ -41,8 +41,8 @@ jobs:
 
     - name: Deploy test appliction
       run: |
-        kubectl create deployment nginx --image=nginx
-        POD=$(kubectl get pod -l app=nginx -o name)
+        kubectl create deployment redis --image=redis
+        POD=$(kubectl get pod -l app=redis -o name)
 
     - name: Install Helm and kube-prometheus stack
       run: |
