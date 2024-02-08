@@ -41,8 +41,8 @@ jobs:
 
     - name: Deploy test appliction
       run: |
-        kubectl create deployment nginx --image=nginx
-        POD=$(kubectl get pod -l app=nginx -o name)
+        kubectl create deployment redis --image=redis
+        POD=$(kubectl get pod -l app=redis -o name)
 
     - name: Install Helm and kube-prometheus stack
       run: |
@@ -52,6 +52,16 @@ jobs:
         helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
         helm repo update
         helm install kps prometheus-community/kube-prometheus-stack
+   
+    - name: Wait for summary engine to collect data
+      run: |
+        echo "waiting for 2.5 minutes..."
+        sleep 160
+
+    - name: Generate summary and dump
+      run: |
+        knoxctl summary --dump
+        cat knoxctl_out/summary/json/summary.json
 
     - name: Generate report and see report
       run: |
