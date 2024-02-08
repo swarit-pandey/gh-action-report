@@ -1,13 +1,20 @@
-name: Setup and Run CLI
+name: Runtime Risks
 
 on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
   push:
-    branches:
-      - main
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
-  setup-run-knoxctl:
+  gh-action-report:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+      issues: write
 
     steps:
     - name: Checkout Repository
@@ -22,12 +29,42 @@ jobs:
 
     - name: Download and extract knoxctl binary
       run: |
-        wget -qO- https://knoxctl.netlify.app/binaries/accuknoxcli_0.1.5_linux_amd64.tar.gz | tar -zxvf -
+        wget -qO- https://knoxctl.netlify.app/binaries/accuknoxcli_0.1.7_linux_amd64.tar.gz | tar -zxvf -
 
-    - name: Move binary and run install
+    - name: Install Knoxctl 
       run: |
         chmod +x knoxctl
         sudo mv knoxctl /usr/local/bin
         knoxctl --help
         kubectl wait --for=condition=ready nodes --all --timeout=60s
         knoxctl install
+
+    - name: Deploy test appliction
+      run: |
+        kubectl create deployment nginx --image=nginx
+        POD=$(kubectl get pod -l app=nginx -o name)
+
+    - name: Install Helm and kube-prometheus stack
+      run: |
+        curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+        chmod 700 get_helm.sh
+        ./get_helm.sh
+        helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+        helm repo update
+        helm install kps prometheus-community/kube-prometheus-stack
+
+    - name: Generate report
+      run: |
+        knoxctl report --baseline .github/workflows/summary.json --no-tui
+
+    - name: Upload PR report as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: pr-report
+        path: knoxctl_out/reports/pr_report.md
+
+    - name: PR comment with file
+      uses: thollander/actions-comment-pull-request@v2
+      with: 
+        filePath: knoxctl_out/reports/pr_report.md
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
