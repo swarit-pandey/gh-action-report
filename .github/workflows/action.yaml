@@ -42,7 +42,7 @@ jobs:
     - name: Deploy test appliction
       run: |
         kubectl create namespace cache
-        kubectl create deployment redis --image=redis --namespace=redis
+        kubectl create deployment redis --image=redis --namespace=cache
     
     - name: Wait for summary engine to collect telemetry data
       run: |
