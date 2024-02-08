@@ -53,9 +53,11 @@ jobs:
         helm repo update
         helm install kps prometheus-community/kube-prometheus-stack
 
-    - name: Generate report
+    - name: Generate report and see report
       run: |
-        knoxctl report --baseline .github/workflows/summary.json --no-tui
+        knoxctl report --baseline .github/workflows/summary.json --no-tui 
+        cat .github/workflows/summary.json
+        cat knoxctl_out/reports/pr_report.md
 
     - name: Upload PR report as artifact
       uses: actions/upload-artifact@v2

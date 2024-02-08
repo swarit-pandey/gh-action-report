@@ -122,7 +122,7 @@
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
                                         "container": {
-                                            "name": "rabbitmq",
+                                            "name": "not_rabbitmq",
                                             "image": "docker.io/library/rabbitmq:3.12.2-management@sha256:2ae0b1448de431124cd77c9477f079d4a89080affb02ff85b800477c551566eb"
                                         },
                                         "destination": "/usr/local/lib/erlang/erts-13.2.2.2/bin/epmd",
@@ -141,7 +141,7 @@
                                         "command": "/usr/local/lib/erlang/erts-13.2.2.2/bin/epmd",
                                         "ip": "127.0.0.1",
                                         "port": 4369,
-                                        "protocol": "TCP",
+                                        "protocol": "UDP",
                                         "count": 402,
                                         "updated_time": 1707400781,
                                         "control_info": {
@@ -268,7 +268,7 @@
                                             "image": "public.ecr.aws/k9v9d5v2/discovery-engine-sumengine:v0.1.15@sha256:6198a89f91f3a17c34e900810d1cf76c8c9bf04b3cce3388a42348796472831b"
                                         },
                                         "type": "Egress",
-                                        "command": "/Sumengine/sumengine",
+                                        "command": "/Sumengine/summary_engine",
                                         "ip": "10.43.202.12",
                                         "port": 32767,
                                         "protocol": "TCP",
@@ -614,8 +614,8 @@
                                             "name": "nginx",
                                             "image": "docker.io/library/nginx:latest@sha256:5f44022eab9198d75939d9eaa5341bc077eca16fa51d4ef32d33f1bd4c8cbe7d"
                                         },
-                                        "source": "/usr/bin/dash",
-                                        "destination": "/usr/bin/grep",
+                                        "source": "/usr/bin/not_dash",
+                                        "destination": "/usr/bin/not_grep",
                                         "count": 1,
                                         "updated_time": 1707376055
                                     },
@@ -771,7 +771,7 @@
                                         "command": "/usr/sbin/nginx",
                                         "ip": "::",
                                         "port": 80,
-                                        "protocol": "AF_INET6",
+                                        "protocol": "TCPv6",
                                         "count": 9,
                                         "updated_time": 1707376055,
                                         "control_info": {
@@ -789,7 +789,7 @@
                                         "command": "/usr/sbin/nginx",
                                         "ip": "0.0.0.0",
                                         "port": 80,
-                                        "protocol": "AF_INET",
+                                        "protocol": "AF_Q_NET",
                                         "count": 9,
                                         "updated_time": 1707376055,
                                         "control_info": {
