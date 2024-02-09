@@ -27,13 +27,6 @@ jobs:
         sudo chown $USER $HOME/k3s.yaml
         echo "KUBECONFIG=$HOME/k3s.yaml" >> $GITHUB_ENV
 
-    - name: Deploy test application
-      run: |
-        kubectl create namespace cache
-        kubectl create deployment redis --image=redis --namespace=cache
-        kubectl create namespace nginx
-        kubectl create deployment nginx --image=nginx --namespace=nginx
-
     - name: Download and extract knoxctl binary
       run: |
         wget -qO- https://knoxctl.netlify.app/binaries/accuknoxcli_0.1.7_linux_amd64.tar.gz | tar -zxvf -
@@ -45,7 +38,14 @@ jobs:
         knoxctl --help
         kubectl wait --for=condition=ready nodes --all --timeout=60s
         knoxctl install
-    
+
+    - name: Deploy test application
+      run: |
+        kubectl create namespace cache
+        kubectl create deployment redis --image=redis --namespace=cache
+        kubectl create namespace nginx
+        kubectl create deployment nginx --image=nginx --namespace=nginx
+
     - name: Wait for summary engine to collect telemetry data
       run: |
         echo "summary engine is collecting data"
