@@ -49,7 +49,7 @@ jobs:
     - name: Wait for summary engine to collect telemetry data
       run: |
         echo "summary engine is collecting data"
-        sleep 160
+        sleep 180
 
     - name: Generate report and see report
       run: |
