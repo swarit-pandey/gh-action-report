@@ -1,4 +1,4 @@
-# Report [2024-02-09 06:22:04 UTC]
+# Report [2024-02-09 06:34:23 UTC]
 
 
 ### Workload Information 
@@ -22,33 +22,6 @@
 
 ```diff
 + /usr/local/bin/redis-server	 
-```
-</td><td>Allow</td></tr></table>
-
-</details>
-<hr>
-
-### Workload Information 
->**Cluster**: default  
->**Namespace**: default  
->**Type/Name**: deployment/nginx  
-
-<details>
-<summary>Process/File Summary</summary>
-
-<table><tr><th>Source Path</th><th>Destination Path</th><th>Status</th></tr><tr><td>
-<code></code>
-</td><td>
-
-```diff
-- /usr/bin/not_cut	 
-```
-</td><td>Allow</td></tr><tr><td>
-<code></code>
-</td><td>
-
-```diff
-+ /usr/bin/cut	 
 ```
 </td><td>Allow</td></tr></table>
 
@@ -227,6 +200,33 @@
 </td><td>
 <code>0.0.0.0</code>
 </td></tr></table>
+
+</details>
+<hr>
+
+### Workload Information 
+>**Cluster**: default  
+>**Namespace**: default  
+>**Type/Name**: deployment/nginx  
+
+<details>
+<summary>Process/File Summary</summary>
+
+<table><tr><th>Source Path</th><th>Destination Path</th><th>Status</th></tr><tr><td>
+<code></code>
+</td><td>
+
+```diff
+- /usr/bin/not_cut	 
+```
+</td><td>Allow</td></tr><tr><td>
+<code></code>
+</td><td>
+
+```diff
++ /usr/bin/cut	 
+```
+</td><td>Allow</td></tr></table>
 
 </details>
 <hr>

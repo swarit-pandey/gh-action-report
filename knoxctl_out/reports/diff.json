@@ -17,8 +17,8 @@
                                         },
                                         "source": "/usr/bin/dash",
                                         "destination": "/usr/bin/basename",
-                                        "count": 654,
-                                        "updated_time": 1707459690
+                                        "count": 655,
+                                        "updated_time": 1707459930
                                     }
                                 ],
                                 "ingress": null,
@@ -32,8 +32,8 @@
                                         "type": "Egress",
                                         "command": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erlexec",
                                         "protocol": "UDP",
-                                        "count": 4,
-                                        "updated_time": 1707458311,
+                                        "count": 5,
+                                        "updated_time": 1707459871,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -48,8 +48,26 @@
                                         "type": "Egress",
                                         "command": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erlexec",
                                         "protocol": "UDP",
+                                        "count": 5,
+                                        "updated_time": 1707459871,
+                                        "control_info": {
+                                            "resource": {},
+                                            "workload": {}
+                                        }
+                                    },
+                                    {
+                                        "pod": "discovery-engine-c5f7cf46c-rbptv",
+                                        "container": {
+                                            "name": "rabbitmq",
+                                            "image": "docker.io/library/rabbitmq:3.12.2-management@sha256:2ae0b1448de431124cd77c9477f079d4a89080affb02ff85b800477c551566eb"
+                                        },
+                                        "type": "Egress",
+                                        "command": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erlexec",
+                                        "ip": "127.0.0.1",
+                                        "port": 4369,
+                                        "protocol": "TCP",
                                         "count": 4,
-                                        "updated_time": 1707458311,
+                                        "updated_time": 1707459871,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -66,8 +84,8 @@
                                         "ip": "127.0.0.1",
                                         "port": 4369,
                                         "protocol": "TCP",
-                                        "count": 3,
-                                        "updated_time": 1707458311,
+                                        "count": 4,
+                                        "updated_time": 1707459871,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -84,8 +102,8 @@
                                         "ip": "127.0.0.1",
                                         "port": 4369,
                                         "protocol": "TCP",
-                                        "count": 3,
-                                        "updated_time": 1707458311,
+                                        "count": 4,
+                                        "updated_time": 1707459871,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -102,26 +120,8 @@
                                         "ip": "127.0.0.1",
                                         "port": 4369,
                                         "protocol": "TCP",
-                                        "count": 3,
-                                        "updated_time": 1707458311,
-                                        "control_info": {
-                                            "resource": {},
-                                            "workload": {}
-                                        }
-                                    },
-                                    {
-                                        "pod": "discovery-engine-c5f7cf46c-rbptv",
-                                        "container": {
-                                            "name": "rabbitmq",
-                                            "image": "docker.io/library/rabbitmq:3.12.2-management@sha256:2ae0b1448de431124cd77c9477f079d4a89080affb02ff85b800477c551566eb"
-                                        },
-                                        "type": "Egress",
-                                        "command": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erlexec",
-                                        "ip": "127.0.0.1",
-                                        "port": 4369,
-                                        "protocol": "TCP",
-                                        "count": 3,
-                                        "updated_time": 1707458311,
+                                        "count": 4,
+                                        "updated_time": 1707459871,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -139,8 +139,8 @@
                                         "command": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erlexec",
                                         "ip": "0.0.0.0",
                                         "protocol": "AF_INET",
-                                        "count": 7,
-                                        "updated_time": 1707458311,
+                                        "count": 8,
+                                        "updated_time": 1707459871,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -156,8 +156,8 @@
                                         "command": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erlexec",
                                         "ip": "0.0.0.0",
                                         "protocol": "AF_INET",
-                                        "count": 7,
-                                        "updated_time": 1707458311,
+                                        "count": 8,
+                                        "updated_time": 1707459871,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -173,8 +173,8 @@
                                         "command": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erlexec",
                                         "ip": "0.0.0.0",
                                         "protocol": "AF_INET",
-                                        "count": 7,
-                                        "updated_time": 1707458311,
+                                        "count": 8,
+                                        "updated_time": 1707459871,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -190,8 +190,8 @@
                                         "command": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erlexec",
                                         "ip": "0.0.0.0",
                                         "protocol": "AF_INET",
-                                        "count": 7,
-                                        "updated_time": 1707458311,
+                                        "count": 8,
+                                        "updated_time": 1707459871,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}

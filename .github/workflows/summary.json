@@ -15,10 +15,10 @@
                                             "name": "rabbitmq",
                                             "image": "docker.io/library/rabbitmq:3.12.2-management@sha256:2ae0b1448de431124cd77c9477f079d4a89080affb02ff85b800477c551566eb"
                                         },
-                                        "source": "/usr/bin/not_dash",
+                                        "source": "/usr/bin/dash",
                                         "destination": "/usr/bin/basename",
-                                        "count": 538,
-                                        "updated_time": 1707409029
+                                        "count": 655,
+                                        "updated_time": 1707459930
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -28,8 +28,8 @@
                                         },
                                         "source": "/usr/bin/dash",
                                         "destination": "/usr/bin/dirname",
-                                        "count": 1614,
-                                        "updated_time": 1707409029
+                                        "count": 1973,
+                                        "updated_time": 1707460171
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -39,8 +39,8 @@
                                         },
                                         "source": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erl_child_setup",
                                         "destination": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erlexec",
-                                        "count": 538,
-                                        "updated_time": 1707409029
+                                        "count": 662,
+                                        "updated_time": 1707460351
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -50,8 +50,8 @@
                                         },
                                         "source": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erl_child_setup",
                                         "destination": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erl",
-                                        "count": 538,
-                                        "updated_time": 1707409029
+                                        "count": 645,
+                                        "updated_time": 1707460411
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -61,8 +61,8 @@
                                         },
                                         "source": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erl_child_setup",
                                         "destination": "/usr/local/lib/erlang/erts-13.2.2.2/bin/inet_gethost",
-                                        "count": 538,
-                                        "updated_time": 1707409029
+                                        "count": 648,
+                                        "updated_time": 1707458550
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -72,8 +72,8 @@
                                         },
                                         "source": "/usr/bin/dash",
                                         "destination": "/usr/bin/df",
-                                        "count": 3265,
-                                        "updated_time": 1707409041
+                                        "count": 3975,
+                                        "updated_time": 1707460219
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -83,8 +83,8 @@
                                         },
                                         "source": "/usr/bin/dash",
                                         "destination": "/usr/local/lib/erlang/erts-13.2.2.2/bin/dyn_erl",
-                                        "count": 538,
-                                        "updated_time": 1707409029
+                                        "count": 654,
+                                        "updated_time": 1707459810
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -94,8 +94,8 @@
                                         },
                                         "source": "/usr/bin/dash",
                                         "destination": "/usr/local/lib/erlang/erts-13.2.2.2/bin/epmd",
-                                        "count": 537,
-                                        "updated_time": 1707409029
+                                        "count": 654,
+                                        "updated_time": 1707459991
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -105,8 +105,8 @@
                                         },
                                         "source": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erl_child_setup",
                                         "destination": "/usr/local/lib/erlang/erts-13.2.2.2/bin/beam.smp",
-                                        "count": 536,
-                                        "updated_time": 1707409029
+                                        "count": 662,
+                                        "updated_time": 1707460351
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -116,8 +116,8 @@
                                         },
                                         "source": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erlexec",
                                         "destination": "/bin/sh",
-                                        "count": 436,
-                                        "updated_time": 1707409029
+                                        "count": 524,
+                                        "updated_time": 1707458910
                                     },
                                     {
                                         "pod": "discovery-engine-c5f7cf46c-rbptv",
@@ -142,8 +142,8 @@
                                         "ip": "127.0.0.1",
                                         "port": 4369,
                                         "protocol": "TCP",
-                                        "count": 538,
-                                        "updated_time": 1707409029,
+                                        "count": 661,
+                                        "updated_time": 1707460471,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -178,8 +178,8 @@
                                         "ip": "10.42.0.19",
                                         "port": 4369,
                                         "protocol": "TCP",
-                                        "count": 538,
-                                        "updated_time": 1707409029,
+                                        "count": 647,
+                                        "updated_time": 1707456751,
                                         "control_info": {
                                             "address_type": "source",
                                             "resource": {
@@ -229,8 +229,8 @@
                                         "ip": "127.0.0.1",
                                         "port": 8090,
                                         "protocol": "TCPv6",
-                                        "count": 82,
-                                        "updated_time": 1707408972,
+                                        "count": 92,
+                                        "updated_time": 1707412400,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -358,8 +358,8 @@
                                         "type": "Egress",
                                         "command": "/usr/local/lib/erlang/erts-13.2.2.2/bin/beam.smp",
                                         "protocol": "UDP",
-                                        "count": 1081,
-                                        "updated_time": 1707409029,
+                                        "count": 1318,
+                                        "updated_time": 1707459811,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -412,8 +412,8 @@
                                         "ip": "10.42.0.19",
                                         "port": 4369,
                                         "protocol": "TCP",
-                                        "count": 538,
-                                        "updated_time": 1707409029,
+                                        "count": 875,
+                                        "updated_time": 1707460351,
                                         "control_info": {
                                             "address_type": "destination",
                                             "resource": {
@@ -475,8 +475,8 @@
                                         "ip": "127.0.0.1",
                                         "port": 4369,
                                         "protocol": "TCP",
-                                        "count": 538,
-                                        "updated_time": 1707409029,
+                                        "count": 655,
+                                        "updated_time": 1707457471,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -520,6 +520,40 @@
                                             },
                                             "workload": {}
                                         }
+                                    },
+                                    {
+                                        "pod": "discovery-engine-c5f7cf46c-rbptv",
+                                        "container": {
+                                            "name": "rabbitmq",
+                                            "image": "docker.io/library/rabbitmq:3.12.2-management@sha256:2ae0b1448de431124cd77c9477f079d4a89080affb02ff85b800477c551566eb"
+                                        },
+                                        "type": "Egress",
+                                        "command": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erlexec",
+                                        "protocol": "UDP",
+                                        "count": 5,
+                                        "updated_time": 1707459871,
+                                        "control_info": {
+                                            "resource": {},
+                                            "workload": {}
+                                        }
+                                    },
+                                    {
+                                        "pod": "discovery-engine-c5f7cf46c-rbptv",
+                                        "container": {
+                                            "name": "rabbitmq",
+                                            "image": "docker.io/library/rabbitmq:3.12.2-management@sha256:2ae0b1448de431124cd77c9477f079d4a89080affb02ff85b800477c551566eb"
+                                        },
+                                        "type": "Egress",
+                                        "command": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erlexec",
+                                        "ip": "127.0.0.1",
+                                        "port": 4369,
+                                        "protocol": "TCP",
+                                        "count": 4,
+                                        "updated_time": 1707459871,
+                                        "control_info": {
+                                            "resource": {},
+                                            "workload": {}
+                                        }
                                     }
                                 ],
                                 "bind": [
@@ -549,8 +583,8 @@
                                         "ip": "0.0.0.0",
                                         "port": 4369,
                                         "protocol": "AF_INET",
-                                        "count": 474,
-                                        "updated_time": 1707409029,
+                                        "count": 586,
+                                        "updated_time": 1707459930,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -566,8 +600,8 @@
                                         "command": "/usr/local/lib/erlang/erts-13.2.2.2/bin/beam.smp",
                                         "ip": "0.0.0.0",
                                         "protocol": "AF_INET",
-                                        "count": 1619,
-                                        "updated_time": 1707409029,
+                                        "count": 1973,
+                                        "updated_time": 1707459811,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -584,8 +618,25 @@
                                         "ip": "0.0.0.0",
                                         "port": 4369,
                                         "protocol": "AF_INET",
-                                        "count": 64,
-                                        "updated_time": 1707408968,
+                                        "count": 77,
+                                        "updated_time": 1707458370,
+                                        "control_info": {
+                                            "resource": {},
+                                            "workload": {}
+                                        }
+                                    },
+                                    {
+                                        "pod": "discovery-engine-c5f7cf46c-rbptv",
+                                        "container": {
+                                            "name": "rabbitmq",
+                                            "image": "docker.io/library/rabbitmq:3.12.2-management@sha256:2ae0b1448de431124cd77c9477f079d4a89080affb02ff85b800477c551566eb"
+                                        },
+                                        "type": "Bind",
+                                        "command": "/usr/local/lib/erlang/erts-13.2.2.2/bin/erlexec",
+                                        "ip": "0.0.0.0",
+                                        "protocol": "AF_INET",
+                                        "count": 8,
+                                        "updated_time": 1707459871,
                                         "control_info": {
                                             "resource": {},
                                             "workload": {}
@@ -637,7 +688,7 @@
                                             "image": "docker.io/library/redis:latest@sha256:11c3e418c29672341be9a8e3015d96f05b88e5ad58829885d36f8342b4da13c2"
                                         },
                                         "source": "/var/lib/rancher/k3s/data/bf3548384eaabb3435bf08112f1b0cba1afc5add6a6f2f2372aa2906a598fd04/bin/containerd-shim-runc-v2",
-                                        "destination": "/usr/local/bin/not_redis_server",
+                                        "destination": "/usr/local/bin/redis-server",
                                         "count": 1,
                                         "updated_time": 1707408121
                                     },
@@ -747,7 +798,7 @@
                                             "name": "nginx",
                                             "image": "docker.io/library/nginx:latest@sha256:5f44022eab9198d75939d9eaa5341bc077eca16fa51d4ef32d33f1bd4c8cbe7d"
                                         },
-                                        "destination": "/usr/bin/not_cut",
+                                        "destination": "/usr/bin/cut",
                                         "count": 1,
                                         "updated_time": 1707376055
                                     },
