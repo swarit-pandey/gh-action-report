@@ -29,7 +29,7 @@ jobs:
 
     - name: Download and extract knoxctl binary
       run: |
-        wget -qO- https://knoxctl.netlify.app/binaries/accuknoxcli_0.1.7_linux_amd64.tar.gz | tar -zxvf -
+        wget -qO- https://knoxctl.accuknox.com/binaries/knoxctl_0.2.7_linux_amd64.tar.gz | tar -zxvf -
 
     - name: Install KubeArmor and Discovery Engine 
       run: |
@@ -49,17 +49,23 @@ jobs:
     - name: Wait for summary engine to collect telemetry data
       run: |
         echo "summary engine is collecting data"
-        sleep 180
+        sleep 360
 
     - name: Generate report and see report
       run: |
         knoxctl report --baseline .github/workflows/summary.json --no-tui 
 
-    - name: Upload PR report as artifact
+    - name: Upload markdown PR report as artifact
       uses: actions/upload-artifact@v2
       with:
-        name: pr-report
+        name: pr-report-md
         path: knoxctl_out/reports/pr_report.md
+
+    - name: Upload diff json as artifact
+      uses: actions/upload-artifact@v2
+      with: 
+        name: pr-report-diff-json
+        path: knoxctl_out/report/diff.json
 
     - name: PR comment with file
       uses: thollander/actions-comment-pull-request@v2
