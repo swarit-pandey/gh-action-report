@@ -20,10 +20,25 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Harden Runner 
-      uses: step-security/harden-runner@v2
+    - name: Harden Runner
+      uses: step-security/harden-runner@17d0e2bd7d51742c71671bd19fa12bdc9d40a3d6 # v2.8.1
       with:
-        egress-policy: audit
+        egress-policy: block
+        allowed-endpoints: >
+          api.github.com:443
+          auth.docker.io:443
+          d2glxqk2uabbnd.cloudfront.net:443
+          gcr.io:443
+          get.k3s.io:443
+          github.com:443
+          knoxctl.accuknox.com:443
+          objects.githubusercontent.com:443
+          production.cloudflare.docker.com:443
+          public.ecr.aws:443
+          registry-1.docker.io:443
+          storage.googleapis.com:443
+          update.k3s.io:443
+
 
     - name: Install k3s
       run: |
