@@ -20,6 +20,11 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
+    - name: Harden Runner 
+      uses: step-security/harden-runner@v2
+      with:
+        egress-policy: audit
+
     - name: Install k3s
       run: |
         curl -sfL https://get.k3s.io | sh -
