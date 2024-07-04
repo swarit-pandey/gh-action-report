@@ -20,6 +20,12 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
+    - name: cimon sec
+      uses: cycodelabs/cimon-action@v0
+      with:
+          report-process-tree: true
+          apply-fs-events: true
+
     - name: Install k3s
       run: |
         curl -sfL https://get.k3s.io | sh -
